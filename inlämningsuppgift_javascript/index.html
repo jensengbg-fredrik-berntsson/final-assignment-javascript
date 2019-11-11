@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Flickr Search</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="showcase">
+        <!-- Header text and search field -->
+        <section class="search">
+          <h1>FLICKR API</h1>
+          <h1 id="flip">FLICKR API</h1>
+
+          <section class="search-row">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Search for images on flickr"
+            />
+            <button type="submit" id="eraseBtn" class="erase-btn">
+              <img src="img/cancel.png" alt="" />
+            </button>
+            <button type="submit" id="searchBtn" class="search-btn">
+              <img src="img/MagnifyingGlass.png" alt="" />
+            </button>
+          </section>
+          <!-- Filter button and options -->
+          <section class="filters">
+            <div class="filter-show">
+              <p>Filters:</p>
+              <button type="submit" id="filterBtn" class="filter-btn">
+                <img src="img/Arrow.png" alt="" />
+              </button>
+            </div>
+          </section>
+          <!-- Filter option nr, size & reset  -->
+          <section id="filterNav" class="filter-nav">
+            <!-- Filter option img nr  -->
+            <div class="choose-amount">
+              <label for="numberImg">Amount Of IMGs:</label>
+              <input
+                onfocus="this.value=''"
+                type="number"
+                id="numberImg"
+                class="number-img"
+                value="50"
+                placeholder="1 - 500"
+              />
+            </div>
+            <!-- Filter option img size  -->
+            <div class="choose-size">
+              <label for="sizeImg">IMG Size:</label>
+              <select id="sizeImg" class="size-img">
+                <option value="s">Small </option>
+                <option value="q">Medium </option>
+                <option value="n">Large </option>
+              </select>
+            </div>
+            <!-- Reset page btn  -->
+            <div class="reset">
+              <p>Reset page:</p>
+              <button type="submit" class="reload-btn">
+                <a href="index.html">
+                  <img src="img/reload.png" alt="Reload"
+                /></a>
+              </button>
+            </div>
+          </section>
+        </section>
+      </header>
+      <main>
+        <!-- Section where the images appear after search  -->
+        <section id="result" class="results"></section>
+        <!-- Lightbox section, hidden from start but styled.  -->
+        <section id="lightboxSec" class="lightbox-sec">
+          <img class="lightbox-img" id="lightboxImg" src="" alt="Random IMG" />
+          <button type="submit" id="closeBtn" class="close-btn">
+            <img src="img/Red-Cross.png" alt="" />
+          </button>
+        </section>
+      </main>
+      <!-- to top btn -->
+      <footer>
+        <button class="to-top" id="toTopBtn">
+          <img src="img/Arrow-up.png" alt="" />
+        </button>
+      </footer>
+    </div>
+    <script type="module" src="js/java.js"></script>
+  </body>
+</html>
